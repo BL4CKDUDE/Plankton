@@ -5,7 +5,7 @@ import nltk
 import nltk.corpus
 import nltk.tokenize.punkt
 import nltk.stem.snowball
-import datetime
+from datetime import datetime
 import time
 import collections
 from nltk.tokenize import WordPunctTokenizer
