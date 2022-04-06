@@ -1,10 +1,10 @@
-from flask import Flask,request
+from flask import Flask
 app = Flask(__name__)
 
 
 @app.route("/")
 def hello():
-    return "Hello, SmartNinja 20:46!"
+    return "Ping Test!"
 
 from flask import request
 from flask_restful import Resource, Api, reqparse
@@ -19,36 +19,34 @@ import string
 
 import pyodbc
 
-# app = Flask(__name__)
+# Server Variables
+server = 'dariel3idiots.database.windows.net'
+db = 'darielihub'
+uname = 'dariel3diots'
+password = 'dariel3idiots!'
+driver = '{ODBC Driver 17 for SQL Server}'
+qna = dict()
+questions = []
+users = []
+map_users = dict()
+map_xpts = {}
+process_time = None;
 
-# # Server Variables
-# server = 'dariel3idiots.database.windows.net'
-# db = 'darielihub'
-# uname = 'dariel3diots'
-# password = 'dariel3idiots!'
-# driver = '{ODBC Driver 17 for SQL Server}'
-# qna = dict()
-# questions = []
-# users = []
-# map_users = dict()
-# map_xpts = {}
-# process_time = None;
+# Get default English stopwords and extend with punctuation
+stopwords = nltk.corpus.stopwords.words('english')
+stopwords.extend(string.punctuation)
+stopwords.append('')
 
-# # Get default English stopwords and extend with punctuation
-# stopwords = nltk.corpus.stopwords.words('english')
-# stopwords.extend(string.punctuation)
-# stopwords.append('')
+# Create tokenizer and stemmer
+tokenizer = WordPunctTokenizer()
 
-# # Create tokenizer and stemmer
-# tokenizer = WordPunctTokenizer()
+# HTTP requestion class
+@app.route("/home")
+def initial():
+    return "Hi, I'm Plankton."
 
-# # HTTP requestion class
-# @app.route("/")
-# def initial():
-#     return "Hi, I'm Plankton."
-
-# @app.route("/request", methods=["GET", "POST"])
-# def get():
+# @app.route("/model/request")
+# def go():
 
 #     start = get_time()
 
