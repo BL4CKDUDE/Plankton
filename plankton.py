@@ -42,9 +42,9 @@ def hello():
     return "New Ping Test!"
 
 # # HTTP requestion class
-# @app.route("/home")
-# def initial():
-#     return "Hi, I'm Plankton."
+@app.route("/home")
+def initial():
+    return "Hi, I'm Plankton."
 
 # @app.route("/model/request")
 # def go():
