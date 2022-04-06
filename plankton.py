@@ -39,7 +39,7 @@ tokenizer = WordPunctTokenizer()
 
 @app.route("/")
 def hello():
-    return "New Ping Test!"
+    return "Ping Test at: "+datetime.now().strftime("%H:%M")
 
 # # HTTP requestion class
 @app.route("/home")
