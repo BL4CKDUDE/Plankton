@@ -43,11 +43,11 @@ stopwords.append('')
 tokenizer = WordPunctTokenizer()
 
 # HTTP requestion class
-@app.route('/')
+@app.route("/")
 def initial():
     return "Hi, I'm Plankton."
 
-@app.route('/request', methods=["GET", "POST"])
+@app.route("/request", methods=["GET", "POST"])
 def get():
 
     start = get_time()
