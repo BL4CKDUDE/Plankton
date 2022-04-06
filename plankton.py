@@ -1,23 +1,23 @@
-from flask import Flask
+from flask import Flask,request
 app = Flask(__name__)
 
 
 @app.route("/")
 def hello():
-    return "Hello, SmartNinja 20:38!"
+    return "Hello, SmartNinja 20:46!"
 
-# from flask import Flask,request
-# from flask_restful import Resource, Api, reqparse
-# import nltk
-# import nltk.corpus
-# import nltk.tokenize.punkt
-# import nltk.stem.snowball
-# import time
-# import collections
-# from nltk.tokenize import WordPunctTokenizer
-# import string
+from flask import request
+from flask_restful import Resource, Api, reqparse
+import nltk
+import nltk.corpus
+import nltk.tokenize.punkt
+import nltk.stem.snowball
+import time
+import collections
+from nltk.tokenize import WordPunctTokenizer
+import string
 
-# import pyodbc
+import pyodbc
 
 # app = Flask(__name__)
 
