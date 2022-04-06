@@ -1,4 +1,4 @@
-Flask==2.1.1
-pyodbc==4.0.30
-nltk==3.5
-Flask-RESTful==0.3.9
+Flask
+pyodbc
+nltk
+Flask-RESTful
