@@ -5,6 +5,7 @@ import nltk
 import nltk.corpus
 import nltk.tokenize.punkt
 import nltk.stem.snowball
+import datetime
 import time
 import collections
 from nltk.tokenize import WordPunctTokenizer
@@ -28,6 +29,7 @@ map_xpts = {}
 process_time = None
 
 # Get default English stopwords and extend with punctuation
+nltk.download('stopwords')
 stopwords = nltk.corpus.stopwords.words('english')
 stopwords.extend(string.punctuation)
 stopwords.append('')
@@ -37,7 +39,7 @@ tokenizer = WordPunctTokenizer()
 
 @app.route("/")
 def hello():
-    return "Ping Test!"
+    return "Ping Test! "+datetime.datetime.now()
 
 # # HTTP requestion class
 # @app.route("/home")
