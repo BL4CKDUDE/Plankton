@@ -1,11 +1,4 @@
 from flask import Flask
-app = Flask(__name__)
-
-
-@app.route("/")
-def hello():
-    return "Ping Test!"
-
 from flask import request
 from flask_restful import Resource, Api, reqparse
 import nltk
@@ -18,6 +11,13 @@ from nltk.tokenize import WordPunctTokenizer
 import string
 
 import pyodbc
+app = Flask(__name__)
+
+
+@app.route("/")
+def hello():
+    return "Ping Test!"
+
 
 # Server Variables
 server = 'dariel3idiots.database.windows.net'
@@ -32,18 +32,18 @@ map_users = dict()
 map_xpts = {}
 process_time = None;
 
-# Get default English stopwords and extend with punctuation
-stopwords = nltk.corpus.stopwords.words('english')
-stopwords.extend(string.punctuation)
-stopwords.append('')
+# # Get default English stopwords and extend with punctuation
+# stopwords = nltk.corpus.stopwords.words('english')
+# stopwords.extend(string.punctuation)
+# stopwords.append('')
 
-# Create tokenizer and stemmer
-tokenizer = WordPunctTokenizer()
+# # Create tokenizer and stemmer
+# tokenizer = WordPunctTokenizer()
 
-# HTTP requestion class
-@app.route("/home")
-def initial():
-    return "Hi, I'm Plankton."
+# # HTTP requestion class
+# @app.route("/home")
+# def initial():
+#     return "Hi, I'm Plankton."
 
 # @app.route("/model/request")
 # def go():
