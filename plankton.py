@@ -29,10 +29,10 @@ map_xpts = {}
 process_time = None
 
 # Get default English stopwords and extend with punctuation
-nltk.download('stopwords')
-stopwords = nltk.corpus.stopwords.words('english')
-stopwords.extend(string.punctuation)
-stopwords.append('')
+# nltk.download('stopwords')
+# stopwords = nltk.corpus.stopwords.words('english')
+# stopwords.extend(string.punctuation)
+# stopwords.append('')
 
 # Create tokenizer and stemmer
 tokenizer = WordPunctTokenizer()
